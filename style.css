@@ -11,6 +11,7 @@ html {
     font-size: 16pt;
     font-family: 'Open Sans', sans-serif;
 }
+
 /*Main Page*/
 .container {
     box-sizing: border-box;
@@ -30,12 +31,12 @@ html {
     border-radius: 10px;
     overflow: auto !important;
 }
-/* */
+/*Nav-bar main page*/
 nav {
     height: 60px;
+    width: 100%;
     background-color: var(--color-1);
     display: flex;
-    justify-content: flex-end;
     align-items: center;
 }
 
@@ -48,6 +49,7 @@ nav {
 nav a {
     border-radius: 25px;
     height: 100%; 
+    
     padding: 0 20px;
     text-decoration: none;
     color:var(--text-color);
@@ -60,14 +62,11 @@ nav a:hover {
     box-shadow: 0 0 10px 3px var(--text-color);
     transition: .5s;
 }
-nav a:last-child{
-    margin-right: 10px;
-}
 nav svg{
     fill: var(--text-color);
 }
 nav .ims {
-    margin-right: auto !important;
+    margin-right: auto;
     padding: .5% 4%;
     background-color: var(--color-1);
     border: 0;
@@ -87,7 +86,7 @@ nav .ims:hover {
 .open-sidebar-button, .close-sidebar-button {
     display: none;
 }
-/* */
+/*Section main page*/
 section {
     display: flex;
 }
@@ -127,14 +126,12 @@ section {
     box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
     transition: .5s;
 }
-
-/* */
+/*image-section main page*/
 .container-img{
     margin-left: auto !important;
     height: 64.5vh;
     width: 70%;
 }
-
 .storage-img{
     display: flex;
     justify-content: center;
@@ -142,6 +139,72 @@ section {
     height: 90%;
 }
 
+/*Login Page*/
+.login-container {
+    display: flex !important;
+    width: auto !important;
+    height: 100%;
+}
+.signin-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 75%;
+}
+.signin {
+    display: flex;
+    flex-direction: column;
+}
+.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    background-color: #e4e4e4;
+    border: 0;
+    box-shadow: 5px 0px 8px 5px rgba(0,0,0,0.25);
+}
+.signin h1 {
+    
+    margin: 30px 30px 5px 35px;
+}
+.signin h5 {
+    margin-left: 25px;
+    color: #686868;
+}
+.social-links {
+    margin-left: 80px;
+}
+.input-email, .input-password {
+    width: 250px;
+    margin: 4px;
+    padding: 3%;
+    border: 0;
+    border-radius: 15px;
+    background-color: #e4e4e4;
+}
+.signin-button, .signup-button {
+    width: 180px;
+    border-radius: 50px;
+    margin: 10px 0 15px 60px;
+    padding: 3%;
+    max-width: 10em;
+    border-radius: 25px;
+    background-color: var(--color-1);
+    border: 0;
+    color: var(--text-color);
+}
+.signin-button:hover, .signup-button:hover {
+    background-color: var(--text-color);
+    color: var(--color-1);
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+    transition: .5s;
+}
+.signup-button {
+    margin: 25px 5px 25px 10px;
+}
 /*xl 4k 2560px*/
 @media (min-width: 2560px) {
     nav{
@@ -240,8 +303,6 @@ section {
         border-radius: 30px;
     }
 }
-
-
 /* standard height */
 @media (max-height: 832px) {
     .description p {
