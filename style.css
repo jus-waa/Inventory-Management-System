@@ -31,6 +31,7 @@ html {
     border-radius: 10px;
     overflow: auto !important;
 }
+
 /*Nav-bar main page*/
 nav {
     height: 60px;
@@ -140,9 +141,6 @@ section {
 }
 
 /*Login Page*/
-
-
-
 .login-back:hover {
     fill: #cacaca;
     transition: .5s;
@@ -150,8 +148,8 @@ section {
 }
 .login-container {
     display: flex !important;
-    width: auto !important;
-    height: 100%;
+    justify-content: flex-end;
+    
 }
 .signin-container{
     height: 75vh;
@@ -159,31 +157,33 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 75%;
+    width: auto !important;
+    flex: 1;
 }
 .signin {
     display: flex;
     flex-direction: column;
+  
 }
 .signup {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 25%;
+    width: auto !important;
     background-color: #e4e4e4;
     border: 0;
     box-shadow: 5px 0px 8px 5px rgba(0,0,0,0.25);
 }
 .signin h1 {
-    margin: 30px 30px 5px 35px;
+    margin: 30px 30px 5px 40px;
 }
 .signin h5 {
-    margin-left: 25px;
+    margin: 0 0 5px 25px;
     color: #686868;
 }
 .social-links {
-    margin-left: 80px;
+    margin-left: 90px;
 }
 .input-email, .input-password {
     width: 250px;
@@ -240,6 +240,10 @@ section {
 .signup-button {
     margin: 25px 5px 25px 10px;
 }
+
+
+
+
 /*xl 4k 2560px*/
 @media (min-width: 2560px) {
     nav{
@@ -276,9 +280,6 @@ section {
     nav a {
         font-size: 12pt;
         transition: .5s;
-    }
-    .signin {
-        margin-left: 35px;
     }
 }
 
