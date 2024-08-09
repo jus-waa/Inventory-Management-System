@@ -43,9 +43,11 @@ nav {
 
 .links-container{
     display: flex;
-    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
+    flex-direction: row;
     width: 100%;
+    margin: 10px;
 }
 nav a {
     border-radius: 25px;
@@ -67,7 +69,7 @@ nav svg{
     fill: var(--text-color);
 }
 nav .ims {
-    margin-right: auto;
+    margin-left: auto !important;
     padding: .5% 4%;
     background-color: var(--color-1);
     border: 0;
@@ -174,6 +176,7 @@ section {
     background-color: #e4e4e4;
     border: 0;
     box-shadow: 5px 0px 8px 5px rgba(0,0,0,0.25);
+    padding: 15px;
 }
 .signin h1 {
     margin: 30px 30px 5px 40px;
