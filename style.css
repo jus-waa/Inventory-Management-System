@@ -310,6 +310,8 @@ section {
     display: flex;
     align-items: center;
     overflow-x: hidden; 
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 .search-wrapper span {
     display: inline-block;
@@ -337,7 +339,7 @@ section {
 .user-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 .user-wrapper small {
     display: inline-block;
@@ -347,16 +349,20 @@ section {
 .logout-wrapper {
     display: flex;
     align-items: center;
-    width: 100px;
-    margin-left: 29px;
+    margin-left: 25px;
 }
 .logout-wrapper img {
     height: 50px;
     width: 50px;
 }
 .logout-wrapper a {
-    color: #686868;
-    margin-left: 0;
+    display: table-cell;
+    color: #7f7f7f;
+    font-size: smaller;
+}
+.logout-wrapper a:hover {
+    color: var(--color-1);
+    transition: .5s ease-in;
 }
 /*xl 4k 2560px*/
 @media (min-width: 2560px) {
