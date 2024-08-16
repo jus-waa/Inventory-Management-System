@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <title>Dashboard</title>
 </head>
-<body>
+<body style="background-color: #f1f5f9;">
     <div class="dashboard-sidebar">
         <div class="dashboard-icon">
             <h2><i>iMS</i> Charcoal</h2>
         </div>
         <div class="dashboard-menu">
             <ul>
-                <li>
+                <li >
                     <a href="#" class="menu-active"><i class="las la-igloo"></i>
                     <span>Dashboard</span></a>
                 </li>
@@ -52,7 +52,9 @@
     <div class="dashboard-content">
         <header>
             <h2>
-                <i class="las la-bars"></i>
+                <a href="" id="toggleBtn">
+                    <i class="las la-bars"></i>
+                </a>
                 Dashboard
             </h2>
             <div class="search-wrapper">
@@ -67,59 +69,18 @@
                     <small>Admin</small>
                 </div>
                 <div class="logout-wrapper">
-                    <img src="references/icons8-logout-100.png" alt="">
-                     <span><a href="#">Logout</a></span>
+                    <a href="" id="logoutBtn">
+                        <img src="references/icons8-logout-100.png" alt="">
+                    </a>
                 </div>
             </div>
             
         </header>
-        <!-- 
-        
-        <main>
-            <div class="cards">
-                <div class="card-single">
-                    <div>
-                        <h1>54</h1>
-                        <span>Customers</span>
-                    </div>
-                    <div>
-                        <span class="las la-users"></span>
-                    </div>
-                </div>
-
-                <div class="card-single">
-                    <div>
-                        <h1>79</h1>
-                        <span>Projects</span>
-                    </div>
-                    <div>
-                        <span class="las la-clipboard"></span>
-                    </div>
-                </div>
-
-                <div class="card-single">
-                    <div>
-                        <h1>124</h1>
-                        <span>Orders</span>
-                    </div>
-                    <div>
-                        <span class="las la-shopping-bag"></span>
-                    </div>
-                </div>
-
-                <div class="card-single">
-                    <div>
-                        <h1>$6k</h1>
-                        <span>Income</span>
-                    </div>
-                    <div>
-                        <span class="las la-google-wallet"></span>
-                    </div>
-                </div>
+        <main class="content-container">
+            <div class="content">
+                    
             </div>
         </main>
-            
-        -->
     </div>
 </body>
 </html>
