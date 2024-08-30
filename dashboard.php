@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,7 @@
         <div class="dashboard-icon" id="dashboard_icon">
             <h2 id="menuTextLogo"><i>iMS</i> Charcoal</h2>
             <img src="references/1343979.png" alt="" id="menuLogo">
+            
         </div>
         <div class="dashboard-menu">
             <ul>

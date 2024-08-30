@@ -1,17 +1,24 @@
 <?php
+    session_start();
     $error_message = '';
 
     if ($_POST) {
         include('database/connection.php');
 
-        $email = $_POST['email'];
+        $username = $_POST['email'];
         $password = $_POST['password'];
 
         $query = 'SELECT * FROM  users WHERE users.email ="'. $username .'" AND users.password="'. $password .'"';
         $stmt = $conn->prepare($query);
-        $result = $stmt->execute();
-        var_dump($stmt->rowCount());
+        $stmt->execute();
+        
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        var_dump($stmt->fetchAll());
         die;
+
+        if($stmt->rowCount() > 0) {
+            
+        } else $error_message = 'Incorrect username or password.';
     }
 ?>
 
@@ -24,15 +31,7 @@
     <title>Login</title>
 </head>
 <body>
-    <?php
-    if(!empty($error_message)){
-    ?>
-        <div id="errMsg">
-            <p>Error: <?= $error_message ?></p>
-        </div>
-    <?php
-    }
-    ?>
+    
     <div class="container">
         <div class="main-container">
             <div class="login-container">
@@ -51,7 +50,11 @@
                             <button class="signin-button">Sign in</button> 
                             <a class="back-button" href="mainpage.html">Go back?</a>
                         </div>
-                        
+                        <?php if(!empty($error_message)){ ?>
+                            <div id="errMsg">
+                                <p><?= $error_message ?></p>
+                            </div>
+                        <?php } ?>
                     </form>
                 </div>
                 <div class="signup">
