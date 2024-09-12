@@ -3,12 +3,10 @@
     $password = $_POST['password'];
 
     // Include connection file
-    include('database/connection.php');
+    include('connection.php');
 
-    $username = 'josh@gmail.com';
-    $password = 'testpassword';
     //Select row / check if user is inside the database 
-    $query = 'SELECT * FROM users WHERE users.username="' .$username. '" AND users.password="' .$password. '"';
+    $query = 'SELECT * FROM users WHERE user.username="' .$username. '" AND user.password="' .$password. '"';
     $stmt = $conn->prepare($query);
     $stmt->execute();
     
