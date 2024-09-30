@@ -1,14 +1,13 @@
 <?php
     $servername = 'localhost';
-    $username = 'root';
-    $password = '1234';
-    $error_message = 'NULL';
+    $db_port = '3307';
+    
     //Connecting to database.
     try {
-        $conn = new PDO("mysql:host=$servername;dbname=myinventory", $username, $password);
+        $conn = new PDO("mysql:host=$servername;port=$db_port;dbname=myinventory", 'root', '');
         $conn->setAttribute(PDO:: ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch ( \Exception $e ) {
+    } catch (\Exception $e ) {
         $error_message = $e->getMessage();
     }
-    var_dump($error_message);
+
 ?>

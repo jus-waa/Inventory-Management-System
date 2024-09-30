@@ -1,23 +1,5 @@
 <?php
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // Include connection file
-    include('connection.php');
-
-    //Select row / check if user is inside the database 
-    $query = 'SELECT * FROM users WHERE user.username="' .$username. '" AND user.password="' .$password. '"';
-    $stmt = $conn->prepare($query);
-    $stmt->execute();
-    
-    var_dump($stmt->fetchAll());
-    die;
-
-    if($stmt->rowCount() > 0) {
-        echo 'has record';
-    } else {
-        echo 'no data';
-    }
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +15,7 @@
         <div class="main-container">
             <div class="login-container">
                 <div class="signin-container">
-                    <form action="loginpage.php" method="POST" class="signin">
+                    <form action="login.php" method="POST" class="signin">
                         <label><h1>Welcome</h1></label>
                         <label><h5>Login using your socials</h5></label>
                         <div class="social-links">
@@ -47,11 +29,22 @@
                             <button class="signin-button">Sign in</button> 
                             <a class="back-button" href="mainpage.html">Go back?</a>
                         </div>
+                       
                         <?php if(!empty($error_message)){ ?>
                             <div id="errMsg">
                                 <p><?= $error_message ?></p>
                             </div>
                         <?php } ?>
+                        <?php 
+                            if(isset($_SESSION['login_message'])) {
+                        ?>
+                        <div id="alerts">
+                        <p>
+                            <?= $_SESSION['login_message'] ?> 
+                        </p>
+                        </div>
+                        
+                        <?php unset($_SESSION['login_message']); }?>
                     </form>
                 </div>
                 <div class="signup">

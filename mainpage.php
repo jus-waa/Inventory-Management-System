@@ -26,7 +26,7 @@
                     <a href="#">About us</a>
                     <a href="#">Work</a>
                     <a href="#">Info</a>
-                    <a href="loginpage.html">Login</a>
+                    <a href="loginpage.php">Login</a>
                 </div>
             </nav>
             <section>

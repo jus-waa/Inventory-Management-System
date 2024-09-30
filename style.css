@@ -144,7 +144,7 @@ section {
 }
 
 /*Login Page*/
-#errMsg {
+#errMsg, #alerts{
     background: #fff;
     text-align: center;
     color: rgb(255, 0, 0);
