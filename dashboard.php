@@ -1,5 +1,10 @@
 <?php
-    
+    session_start();
+    if(!isset($_SESSION['user'])){
+        $_SESSION['login_message'] = "Please login to continue.";
+        header('location: loginpage.php');
+    }
+    $user = $_SESSION['user'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,11 +74,11 @@
             <div class="user-wrapper">
                 <img src="references/user.png" width="50px" height="30px" alt="user">
                 <div>
-                    <h4>John Doe</h4>
+                    <h4><?= $user['first_name'] . ' ' . $user['last_name']; ?></h4>
                     <small>Admin</small>
                 </div>
                 <div class="logout-wrapper">
-                    <a href="" id="logoutBtn">
+                    <a href="logout.php" id="logoutBtn">
                         <img src="references/icons8-logout-100.png" alt="">
                     </a>
                 </div>
