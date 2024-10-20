@@ -1,6 +1,6 @@
 <?php
     $servername = 'localhost';
-    $db_port = '3307';
+    $db_port = '3306';
     
     //Connecting to database.
     try {
